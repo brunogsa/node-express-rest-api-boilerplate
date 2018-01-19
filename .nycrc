@@ -1,0 +1,20 @@
+{
+  "register": "babel-register",
+  "include": [
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "tests/api/*.js",
+    "tests/unit/**/*.js"
+  ],
+  "reporter": [
+    "text",
+    "text-summary",
+    "html"
+  ],
+  "sourceMap": false,
+  "instrument": true,
+  "all": true,
+  "temp-directory": "./coverage/.nyc_output"
+}
