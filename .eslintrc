@@ -8,6 +8,7 @@
     "jasmine": true
   },
   "rules": {
+    "comma-dangle": [2, "always-multiline"],
     "space-before-function-paren": [0, "anonymous"],
     "no-await-in-loop": [2],
     "no-console": [0],

@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon . | bunyan -o short",
     "test": "cross-env npm run lint && npm run test:all",
-    "lint": "eslint ./src/**/**.js ./tests/api/*.js ./tests/unit/**/*.js",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
     "test:all": "nyc mocha --require babel-core/register tests/unit/**/*.js tests/api/index.js",
     "test:unit": "nyc mocha --require babel-core/register tests/unit/**/*.js",
     "test:api": "nyc mocha --require babel-core/register tests/api/index.js",

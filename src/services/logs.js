@@ -8,7 +8,7 @@ const ALLOWED_LOG_LEVELS = {
   INFO: 'info',
   WARN: 'warn',
   ERROR: 'error',
-  FATAL: 'fatal'
+  FATAL: 'fatal',
 };
 
 function createConsoleStream(logLevel) {
@@ -16,7 +16,7 @@ function createConsoleStream(logLevel) {
 
   return {
     stream: process.stdout,
-    level: logLevel
+    level: logLevel,
   };
 }
 
@@ -49,8 +49,8 @@ function createLogger(params = {}) {
     name: params.name,
 
     streams: [
-      createConsoleStream(params.consoleLogLevel)
-    ]
+      createConsoleStream(params.consoleLogLevel),
+    ],
   });
 
   return logger;
@@ -69,7 +69,7 @@ function prettifyObj(obj) {
 
 const globalLogger = createLogger({
   name: configs.appName,
-  consoleLogLevel: configs.logLevel
+  consoleLogLevel: configs.logLevel,
 });
 
 const requestLoggerMiddleware = function (req, res, next) {
@@ -117,5 +117,5 @@ export {
   prettifyObj,
   requestLoggerMiddleware,
   exposeErrorResponsesMiddleware,
-  responseLoggerMiddleware
+  responseLoggerMiddleware,
 };

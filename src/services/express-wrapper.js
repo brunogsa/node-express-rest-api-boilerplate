@@ -11,7 +11,7 @@ import {
   globalLogger as log,
   requestLoggerMiddleware,
   exposeErrorResponsesMiddleware,
-  responseLoggerMiddleware
+  responseLoggerMiddleware,
 
 } from './logs';
 
@@ -25,7 +25,7 @@ export default (apiRoot, routes) => {
   if (env === 'production') {
     app.set('forceSSLOptions', {
       enable301Redirects: false,
-      trustXFPHeader: true
+      trustXFPHeader: true,
     });
 
     app.use(forceSSL);
