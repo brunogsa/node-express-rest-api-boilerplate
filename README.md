@@ -1,6 +1,6 @@
 ## Starting the Server
 
-1. Set the `.env` file using `cp -f .env_sample .env`
+1. Set the `.env` file using `cp -f .env-sample .env`
 2. Run `npm install`
 3. Start the dev server using `npm start`
 
@@ -9,6 +9,7 @@
 - `npm start` - Run the API in development mode
 - `npm test` - Checks if your code is ok before creating a commit
 - `npm run lint` - Lint using ESLint
+- `npm run lint:fix` - Lint Automatic Fix
 - `npm run test:unit` - Run the unit tests
 - `npm run test:api` - Run tests that actually pings the API
 - `npm run test:all` - Run all tests
