@@ -1,9 +1,10 @@
 import path from 'path';
+
 const dotenv = require('dotenv-safe');
 
 dotenv.load({
   path: path.join(__dirname, '../.env'),
-  sample: path.join(__dirname, '../.env_sample'),
+  sample: path.join(__dirname, '../.env-sample'),
 });
 
 const configs = {
